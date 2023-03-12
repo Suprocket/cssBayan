@@ -3,55 +3,76 @@
     padding: 0;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     box-sizing: border-box;
-    border: 1px solid #ff0000;
 }
+
 body{
+    color: #333;
     background-color: #74EBD5;
     background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
 }
-.wrapper{
-    margin: 100px auto;
-    width: 600px;
-}
-.wrapper__title{
-    text-align: center;
-    margin-bottom: 100px;
-}
-.accordion{
 
-} 
-.accordion li{
-    width: 100%;
-    list-style: none;
-    margin-bottom: 10px;
-    background: #4dffe1;
-    padding: 10px;
-    border-radius: 10px;
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+@media (min-height: 568px) and (min-width: 320px) {
+    
 }
-.accordion li label{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    color: rgb(38, 0, 255);
+
+@media (min-height: 1180px) and (min-width: 820px) {
+    /* CSS stuff */
 }
-.accordion li label span{
-    font-size: 22px;
-    color: #333;
+
+@media (min-height: 1080px) and (min-width: 1920px) {
+    
+    .wrapper{
+        margin: 100px auto;
+        width: 600px;
+    }
+    
+    .wrapper__title{
+        text-align: center;
+        margin-bottom: 100px;
+    }
+    .wrapper__title-link{
+        color: #333;
+        text-decoration: none;
+    }
+    .accordion li{
+        width: 100%;
+        list-style: none;
+        margin-bottom: 10px;
+        background: #4dffe1;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .accordion li label{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        color: #333;
+    }
+    .accordion li label span{
+        font-size: 22px;
+        color: #333;
+    }
+    .accordion label + input[type='radio'] {
+        display: none;
+    }
+    .accordion .content{
+        padding: 0 10px;
+        line-height: 26px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    .accordion label + input[type='radio']:checked + .content{
+        max-height: 400px;
+    }
 }
-.accordion label + input[type='radio'] {
-    display: none;
-}
-.accordion .content{
-    padding: 0 10px;
-    line-height: 26px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s;
-}
-.accordion label + input[type='radio']:checked + .content{
-    max-height: 400px;
-}
+

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4a5219414d.js" crossorigin="anonymous"></script>
     <title>CSSBayan</title>
 </head>
 <body>
@@ -12,33 +13,43 @@
         <h1 class="wrapper__title">CSSBAYAN by <a class="wrapper__title-link" href="http://www.suprocket.ru/">Suprocket</a></h1>
         <ul class="accordion">
             <li>
-                <label for="1stMeme">Junior devs writing comments <span>+</span></label>
-                <input type="radio" name="checker" id="1stMeme" checked>
+                <div class="meminfo">
+                    <div class="meminfo__title">
+                        <label for="1stMeme">Junior devs writing comments </label>
+                    </div>
+                    <div class="meminfo__plus">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="meminfo__minus">
+                        <i class="fa-solid fa-minus"></i>
+                    </div>
+                </div>
+                <input class="meminfo__input" type="checkbox" name="checker" id="1stMeme" checked>
                 <div class="content">
                     <img src="images/first.jpg" alt="first-meme-image">
                 </div>
             </li>
-            <li>
+            <!-- <li>
                 <label for="2ndMeme">Web Development Fundamentals<span>+</span></label>
-                <input type="radio" name="checker" id="2ndMeme">
+                <input type="checkbox" name="checker" id="2ndMeme">
                 <div class="content">
                     <img src="images/second.jpg" alt="first-meme-image">
                 </div>
             </li>
             <li>
                 <label for="3rdMeme">Bad idea to become a fullstack developer<span>+</span></label>
-                <input type="radio" name="checker" id="3rdMeme">
+                <input type="checkbox" name="checker" id="3rdMeme">
                 <div class="content">
                     <img src="images/third.jpg" alt="first-meme-image">
                 </div>
             </li>
             <li>
                 <label for="4thMeme">Remember the deadline<span>+</span></label>
-                <input type="radio" name="checker" id="4thMeme">
+                <input type="checkbox" name="checker" id="4thMeme">
                 <div class="content">
                     <img src="images/last.jpg" alt="first-meme-image">
                 </div>
-            </li>
+            </li> -->
         </ul>
     </div>
 </body>

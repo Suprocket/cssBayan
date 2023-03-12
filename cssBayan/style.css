@@ -16,63 +16,99 @@ img {
     height: auto;
   }
 
+.wrapper{
+    margin: 100px auto;
+    width: 600px;
+}
+
+.wrapper__title{
+    text-align: center;
+    margin-bottom: 100px;
+}
+.wrapper__title-link{
+    color: #333;
+    text-decoration: none;
+}
+
+.accordion li{
+    width: 100%;
+    list-style: none;
+    margin-bottom: 10px;
+    background: #4dffe1;
+    padding: 3% ;
+    border-radius: 10px;
+}
+
+
+.meminfo{
+    display: flex;
+    flex-direction: row;
+}
+.meminfo__title{
+    width: 90%;
+}
+
+.meminfo__title label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: #8482e9;
+}
+
+.meminfo__input:checked + .content{
+    max-height: 400px;
+} 
+
+.meminfo__plus{
+    width: 10%;
+    top: 50%;
+    left: 50%;
+    display: none;
+}
+.meminfo__minus{
+    width: 10%;
+    top: 50%;
+    left: 50%;
+    display: none;
+}
+.meminfo__input {
+    display: none;
+}
+
+.accordion .content{
+    padding: 0 3%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
 @media (min-height: 568px) and (min-width: 320px) {
     
 }
 
 @media (min-height: 1180px) and (min-width: 820px) {
-    /* CSS stuff */
+    
 }
 
 @media (min-height: 1080px) and (min-width: 1920px) {
-    
-    .wrapper{
-        margin: 100px auto;
-        width: 600px;
+    .accordion:hover label{
+        color: rgb(0, 4, 255);
     }
-    
-    .wrapper__title{
-        text-align: center;
-        margin-bottom: 100px;
+    .accordion:hover .meminfo__minus{
+        color: rgb(0, 4, 255);
     }
-    .wrapper__title-link{
-        color: #333;
-        text-decoration: none;
+    .accordion:hover .meminfo__plus{
+        color: rgb(0, 4, 255);
     }
-    .accordion li{
-        width: 100%;
-        list-style: none;
-        margin-bottom: 10px;
-        background: #4dffe1;
-        padding: 10px;
-        border-radius: 10px;
-    }
-    .accordion li label{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-        font-size: 18px;
-        font-weight: 500;
-        cursor: pointer;
-        color: #333;
-    }
-    .accordion li label span{
-        font-size: 22px;
-        color: #333;
-    }
-    .accordion label + input[type='radio'] {
+    .meminfo__input:checked + .meminfo__plus{
         display: none;
     }
-    .accordion .content{
-        padding: 0 10px;
-        line-height: 26px;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s;
+    .meminfo__input:checked + .meminfo__minus{
+        display: block;
     }
-    .accordion label + input[type='radio']:checked + .content{
-        max-height: 400px;
-    }
-}
 
+}
